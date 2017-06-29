@@ -1,0 +1,117 @@
+body{
+	font-family: Helvetica, Arial, 'LiHei Pro', '微軟正黑體';
+	margin:2%;
+	border:1px solid black;
+	padding: 5%;
+	color:black;
+}
+
+.Center{
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+.Board{
+	margin-top: 50px;
+	width: 100%;
+}
+.Note,.Length,.RecordNote,.Button{
+	border:black 1px solid;
+	margin:1px;
+	padding:1px;
+	width:10%;
+	min-width:60px;
+	cursor:pointer;
+
+	display:inline-block;
+	
+	background: white;
+	color:black;
+	font-size:12px;
+	text-align: center;
+	vertical-align: middle;
+}
+.Button.Disable{
+	color:white;
+}
+.Button.Disable:hover{
+	background: white;
+	color:white;
+}
+
+
+.Note:hover,.Length:hover,.Button:hover{
+	background: #CCCCCC;
+}
+.Sharp{
+	background: black;
+	color:white;
+}
+
+.Length>p{
+	font-size: 12px;
+}
+.Length>input{
+	width:100%;
+}
+.Note.Select,
+.Length.Select,
+.Light.Select,
+.Button.Select{
+	border:2px blue solid;
+}
+
+
+.Output{
+	border: 1px solid black;
+	min-height: 50px;
+}
+
+.Red{
+	fill:rgba(255,0,0,0.4);
+}
+.Red.Select{
+	fill:red;
+}
+
+.Green{
+	fill:rgba(0,255,0,0.4);
+}
+.Green.Select{
+	fill:green;
+}
+.Yellow{
+	fill:rgba(255,255,0,0.4);
+}
+.Yellow.Select{
+	fill:yellow;
+}
+
+
+.record_light:before {
+  content: ' \25CF';
+  font-size: 20px;  
+}
+.record_light.r{
+	color:red;
+}
+.record_light.g{
+	color:green;
+}
+.record_light.y{
+	color:yellow;
+}
+.record_light.none{
+	color:white;	
+}
+
+.blink{
+	animation:blinker 1s linear infinite;
+}
+
+@keyframes blinker{  
+	0% {opacity: 100;}
+	25%{opacity: 0;}
+	50%{opacity: 100;}
+	75%{opacity: 0;}	
+}
